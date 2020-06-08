@@ -1,0 +1,23 @@
+
+form {border: 1px black solid;
+    width: 750px;
+    margin: 0 auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 10px;
+    text-align: center;
+    }
+    
+    input {
+        width: 100%;
+        height: 30px;
+        font-size: 14px;
+    }
+
+    form label {display:block;
+        text-align: left;}
+
+        .submit {
+            width: 25%;
+        }
