@@ -8,18 +8,40 @@
   <body>
 
     <form>
-        <label>E-Mail Address</label>
-        <input type="email" value=""><br/><br/>
-        <label>Country</label>
-        <input type="text" value=""><br/><br/>
-        <label>Zip Code</label> <input type="text" value=""><br/> <br/>
-        <label>Password</label> <input type="password" value=""><br/><br/>
-        <label>Password Confirmation</label> <input type="password" value="">
-<br/><br/>
+        <label for="email">E-Mail Address
+        <input type="email" id="email" value="" required pattern=".+@.+\..+">
+        <span class="error" aria-live="polite"></span>    
+        </label>
+        <br/>
+        <label for="country" pattern="">Country
+        <input type="text" value="" id="country" pattern="[a-zA-Z]{3,}" required>
+        <span class="error" aria-live="polite"></span>
+        </label>
+        <br/>
+        <label for="zip">Zip Code 
+            <input type="text" value="" id="zip" pattern="\d{5}" required>
+            <span class="error" aria-live="polite"></span>
+        </label>
+        <br/>
+        <label for="pass">Password
+            <input type="password" value="" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" id="pass" required>
+            <span class="error" aria-live="polite"></span>
+        </label>
+
+        <br/>
+        <label for="passConfirm">Password Confirmation 
+        <input type="password" value="" id="passConfirm" required>
+        <span class="error" aria-live="polite"></span>
+    </label>
+        <br/>
         <input type="submit" value="Create Account" class="submit">
 
     </form>
   
+    <div id="thumbsup" style="display:none;">
+<img src="thumbsup.png"><br/>
+Your form has been submitted!
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
