@@ -9,28 +9,28 @@
 
     <form>
         <label for="email">E-Mail Address
-        <input type="email" id="email" value="" required pattern=".+@.+\..+">
+        <input type="email" id="email" value="" pattern=".+@.+\..+">
         <span class="error" aria-live="polite"></span>    
         </label>
         <br/>
         <label for="country" pattern="">Country
-        <input type="text" value="" id="country" pattern="[a-zA-Z]{3,}" required>
+        <input type="text" value="" id="country" pattern="[a-zA-Z]{3,}">
         <span class="error" aria-live="polite"></span>
         </label>
         <br/>
         <label for="zip">Zip Code 
-            <input type="text" value="" id="zip" pattern="\d{5}" required>
+            <input type="text" value="" id="zip" pattern="\d{5}">
             <span class="error" aria-live="polite"></span>
         </label>
         <br/>
         <label for="pass">Password
-            <input type="password" value="" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" id="pass" required>
+            <input type="password" value="" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" id="pass">
             <span class="error" aria-live="polite"></span>
         </label>
 
         <br/>
         <label for="passConfirm">Password Confirmation 
-        <input type="password" value="" id="passConfirm" required>
+        <input type="password" value="" id="passConfirm">
         <span class="error" aria-live="polite"></span>
     </label>
         <br/>

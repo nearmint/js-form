@@ -15,12 +15,19 @@ const passConfirmError = document.querySelector("#passConfirm + span.error");
 
 const form  = document.getElementsByTagName('form')[0];
 
+email.addEventListener('blur', (event) => {
+
+    if(email.value === "") {
+        email.setCustomValidity("Please enter a value!");
+        emailError.textContent = "You need to enter value.";
+    }
 
 email.addEventListener("input", function(event) {
 
+ 
     if(email.validity.patternMismatch) {
         email.setCustomValidity("I am expecting an e-mail address!");
-        emailError.textContent = "You need to enter an e-mail address."
+        emailError.textContent = "You need to enter an e-mail address.";
     }
     else {
         email.setCustomValidity("");
@@ -29,6 +36,15 @@ email.addEventListener("input", function(event) {
 
 
 });
+
+});
+
+country.addEventListener('blur', (event) => {
+
+    if(country.value === "") {
+        country.setCustomValidity("Please enter a value!");
+        countryError.textContent = "You need to enter value.";
+    }
 
 country.addEventListener("input", function() {
 
@@ -45,6 +61,15 @@ country.addEventListener("input", function() {
 
 })
 
+});
+
+zip.addEventListener('blur', (event) => {
+
+    if(zip.value === "") {
+        zip.setCustomValidity("Please enter a value!");
+        zipError.textContent = "You need to enter value.";
+    }
+
 zip.addEventListener("input", function() {
     if(zip.validity.patternMismatch) {
         zip.setCustomValidity("Please enter a Zip Code with 5 digits!");
@@ -56,6 +81,16 @@ zip.addEventListener("input", function() {
         zipError.textContent = "";
     }
 })
+
+});
+
+pass.addEventListener('blur', (event) => {
+
+    if(pass.value === "") {
+        pass.setCustomValidity("Please enter a value!");
+        passError.textContent = "You need to enter value.";
+    }
+
 
 pass.addEventListener("input", function() {
     if(pass.validity.patternMismatch) {
@@ -71,6 +106,15 @@ pass.addEventListener("input", function() {
     passContent = pass.textContent;
 
 })
+});
+
+
+passConfirm.addEventListener('blur', (event) => {
+
+    if(passConfirm.value === "") {
+        passConfirm.setCustomValidity("Please enter a value!");
+        passConfirmError.textContent = "You need to enter value.";
+    }
 
 passConfirm.addEventListener("input", function() {
 
@@ -87,7 +131,7 @@ passConfirm.addEventListener("input", function() {
     }
 
 })
-
+});
 
 form.addEventListener('submit', function (event) {
     event.preventDefault();
@@ -95,3 +139,4 @@ form.addEventListener('submit', function (event) {
     document.getElementById("thumbsup").style.display = "block";
 
 });
+
